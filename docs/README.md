@@ -8,7 +8,7 @@ Available and in-house JS libraries for enhancing HTML rendering in showing form
 + [Diagram with Mermaid](html/mermaid.html)
 + [Molecule with 3Dmol.js](html/3dmol.html)
 + [Sheet music with abcjs](html/abcjs.html)
-
++ [Scatter plot with Chart.js](html/scatter.html)
 
 ## in-house
-+ [Scatter plot with Chart.js](html/scatter.html)
++ [SVG path](html/svgpath.html)
