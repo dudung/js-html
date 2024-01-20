@@ -5,3 +5,4 @@ Available and in-house JS libraries for enhancing HTML rendering in showing form
 + [Markdown with Markdown-it!](html/markdown-it.html)
 + [Math with KaTeX](html/katex.html)
 + [Diagram with Mermaid](html/mermaid.html)
++ [Molecule with 3Dmol](html/3dmol.html)
