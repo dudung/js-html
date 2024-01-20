@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+  integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous" />
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+  integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,
+    {
+      delimiters: [
+        {left: '$$', right: '$$', display:true},
+        {left: '$', right: '$', display:false},
+        {left: '\\(', right: '\\)', display: false},
+        {left: '\\[', right: '\\]', display: true}
+      ]
+    }
+  );"></script>
+
+<link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+
+<h1>Math</h1>
+Math symbols and equations are rendered using <a href="https://katex.org/">KaTeX</a>.
+
+
+<h2>Inline mode</h2>
+It is an equation in inline mode, e.g $y = ax^2 + bx + c$.
+
+<pre>
+It is an equation in inline mode, e.g $y = ax^2 + bx + c$.
+</pre>
+
+
+<h2>Display mode</h2>
+It is an equation in display mode
+
+$$\tag{1}
+x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+$$
+
+<pre>
+It is an equation in display mode
+
+$$\tag{1}
+x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+$$
+</pre>
+
+</body>
+</html>

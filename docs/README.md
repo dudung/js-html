@@ -3,4 +3,5 @@ JS libraries for enhancing HTML rendering in showing math, diagram, molecules, s
 
 
 ## examples
-+ [Markdown](html/markdown.html)
++ [Markdown with Markdown-it!](html/markdown.html)
++ [Math with KaTeX](html/math.html)
