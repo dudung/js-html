@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+-->
+<script src="../js/markdown-it.js"></script>
+<script>
+window.onload = function() {
+  var md = window.markdownit();
+  var div = document.getElementsByClassName('markdown');
+  for(var i = 0; i < div.length; i++) {
+    var content = div[i].innerHTML;
+    document.getElementsByClassName('markdown')[i].innerHTML = md.render(content);
+  }
+}
+</script>
+<link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+
+<div class="markdown">
+# Markdown
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor ([Wikipedia, 2024](https://en.wikipedia.org/w/index.php?oldid=1197360439))
+</div>
+
+<pre>
+# Markdown
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor ([Wikipedia, 2024](https://en.wikipedia.org/w/index.php?oldid=1197360439))
+</pre>
+
+<div class="markdown">
+## Markdown it!
+A next generation Markdown parser in JavaScript.
++ GitHub:
+  - url https://github.com/markdown-it
++ Logo:
+  - ![](https://avatars.githubusercontent.com/u/10248321?s=32&v=0)
+</div>
+
+<pre>
+## Markdown it!
+A next generation Markdown parser in JavaScript.
++ GitHub:
+  - url https://github.com/markdown-it
++ Logo:
+  - ![](https://avatars.githubusercontent.com/u/10248321?s=32&v=0)
+</pre>
+
+<div class="markdown">
+### Table
+Example of a table is as follow.
+
+No | ID | Pseudonym
+:- | -: | :-:
+1 | a39c3 | Isaac Newton
+11 | 98d9u | Albert Einstein
+111 | xa9dk | Stephen Hawking
+1111 | d3sot | Thomas Alva Edison
+</div>
+
+<pre>
+### Table
+Example of a table is as follow.
+
+No | ID | Pseudonym
+:- | -: | :-:
+1 | a39c3 | Isaac Newton
+11 | 98d9u | Albert Einstein
+111 | xa9dk | Stephen Hawking
+1111 | d3sot | Thomas Alva Edison
+</pre>
+
+<div class="markdown">
+### Code
+You can write lines of code as follow.
+```
+// JavaScript
+console.log("Hello, World!");
+```
+</div>
+
+<pre>
+### Code
+You can write lines of code as follow.
+```
+// JavaScript
+console.log("Hello, World!");
+```
+</pre>
+
+</body>
+</html>
