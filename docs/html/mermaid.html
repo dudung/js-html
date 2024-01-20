@@ -3,53 +3,90 @@
   <head>
     <meta charset="UTF-8">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
-  integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous" />
-<!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
-  integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
-  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-  onload="renderMathInElement(document.body,
-    {
-      delimiters: [
-        {left: '$$', right: '$$', display:true},
-        {left: '$', right: '$', display:false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
-      ]
-    }
-  );"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js" integrity="sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A=" crossorigin="anonymous"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 
 <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
 
-<h1>Math</h1>
-Math symbols and equations are rendered using <a href="https://katex.org/">KaTeX</a>.
+<h1>Diagram</h1>
+Diagrams, e.g. flowchart and mindmap, are rendered using <a href="https://mermaid.js.org/">Mermaid</a>.
 
 
-<h2>Inline mode</h2>
-It is an equation in inline mode, e.g $y = ax^2 + bx + c$.
+<h2>Flowchart</h2>
+<div class="mermaid">
+flowchart LR
+B --> I --> C --"Y"--> PY
+C --"N"--> PN
+PY & PN --> O --> E
+B(["Begin"])
+I[/"Input"/]
+C{"Condition?"}
+PY["Do this"]
+PN["Do that"]
+O[/"Output"/]
+E["End"]
+</div>
 
 <pre>
-It is an equation in inline mode, e.g $y = ax^2 + bx + c$.
+&lt;div class="mermaid">
+flowchart LR
+B --> I --> C --"Y"--> PY
+C --"N"--> PN
+PY & PN --> O --> E
+B(["Begin"])
+I[/"Input"/]
+C{"Condition?"}
+PY["Do this"]
+PN["Do that"]
+O[/"Output"/]
+E["End"]
+&lt;/div>
 </pre>
 
 
-<h2>Display mode</h2>
-It is an equation in display mode
-
-$$\tag{1}
-x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
-$$
+<h2>Mindmap</h2>
+<div class="mermaid">
+mindmap
+root((Physics))
+  Mechanics
+    Kinematics
+    Dynamics
+    Statics
+    Energy
+  Fluid
+    Hydrostatics
+    Hydrodynamics
+    Surface tension
+  Field
+    Electromagnetism
+      Electric field
+      Magnetic Field
+    Gravitation
+</div>
 
 <pre>
-It is an equation in display mode
-
-$$\tag{1}
-x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
-$$
+&lt;div class="mermaid">
+mindmap
+root((Physics))
+  Mechanics
+    Kinematics
+    Dynamics
+    Statics
+    Energy
+  Fluid
+    Hydrostatics
+    Hydrodynamics
+    Surface tension
+  Field
+    Electromagnetism
+      Electric field
+      Magnetic Field
+    Gravitation
+&lt;/div>
 </pre>
 
 </body>
