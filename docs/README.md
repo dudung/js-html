@@ -3,5 +3,5 @@ Available and in-house JS libraries for enhancing HTML rendering in showing form
 
 ## examples
 + [Markdown with Markdown-it!](html/markdown-it.html)
-+ [Math with KaTeX](katex/math.html)
++ [Math with KaTeX](katex/katex.html)
 + [Diagram with Mermaid](mermaid/math.html)
