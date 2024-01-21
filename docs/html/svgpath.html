@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<script src="../js/chartjs-dataset.js"></script>
+<script src="../js/inner.js"></script>
+
+<link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+
+<h1>SVG path</h1>
+Path object form SVG is rendered with JavaScript.
+
+
+<h2>Example for path object</h2>
+
+Following is an example.
+<div id="svg-1" style='width: 200px; height: 200px;'>
+B_STYLE red,3,#ccf
+M 50 50 l 100 0
+v 100 h -100 z
+
+B_STYLE blue,10,#aaf
+M 100 120 l 100 0
+v 100 h -100 z
+</div>
+
+
+
+
+
+<pre>
+</pre>
+
+B_STYLE #f44,3,#fcc
+M 150 100 l 50 0 l 0 -50 l -100 0 l 0 100 l 100 0 m 0 -25
+m -25 0 l -50 0 l 0 -50 l 50 0
+
+B_STYLE #080,4,none
+M 50,50
+A 100 100 0.0 0 1 200 150
+Z
+
+
+
+<script>
+text2svg('svg-1', 200, 100, 'blue');
+
+function text2svg(id, w, h, b) {
+  var svgns = "http://www.w3.org/2000/svg";
+  var svg = document.createElementNS(svgns, "svg");
+  svg.setAttribute("width", w);
+  svg.setAttribute("height", h);
+
+  var border = b;
+  if(border.length == 0) border = "#888";
+  svg.style.border = '0.1px solid ' + border;
+
+  var div = document.getElementById(id);
+
+  var text = div.innerHTML;
+  var eol = getEOL(text);
+  var blocks = getBlocks(text, eol);
+
+  for(let b of blocks) {
+    let lines = b.split(eol);
+    let style = lines.shift().split(' ')[1].split(',');
+    let d = lines.join(' ');
+
+    let path = document.createElementNS(svgns, "path");
+    path.setAttribute("d", d);
+    path.setAttribute("stroke", style[0]);
+    path.setAttribute("stroke-width", style[1]);
+    path.setAttribute("fill", style[2]);
+
+    svg.append(path);
+    div.append(svg);
+  }
+}
+
+</script>
+
+</body>
+</html>
